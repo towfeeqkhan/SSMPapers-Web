@@ -1,0 +1,165 @@
+/* Update Page Styles */
+.update-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient);
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.update-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.update-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.update-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+.update-card h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.version {
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.update-text {
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.whats-new {
+    text-align: left;
+    background: rgba(108, 99, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 1rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.whats-new h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.whats-new ul {
+    list-style: none;
+    padding: 0;
+}
+
+.whats-new li {
+    padding: 0.5rem 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.whats-new li i {
+    color: var(--accent-green);
+    margin-right: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.update-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-update {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.btn-update:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4);
+}
+
+
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .update-card {
+        padding: 2rem;
+    }
+    
+    .update-card h1 {
+        font-size: 1.8rem;
+    }
+    
+    .update-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .update-card {
+        padding: 1.5rem;
+    }
+    
+    .update-card h1 {
+        font-size: 1.5rem;
+    }
+    
+    .update-icon {
+        font-size: 3rem;
+    }
+}
