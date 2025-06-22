@@ -7,21 +7,18 @@ if (downloadButton) {
         // Save original button text
         const originalText = this.innerHTML;
         
-        // Add loading state
+        // Add loading state immediately
         this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
         this.disabled = true;
         
-        // Simulate download delay (4 seconds)
-        const delay = 2000; // Fixed 2 second delay
+        // Redirect to download URL immediately
+        window.location.href = 'https://ssmpapers.xyz/apk/1.0.0/SSM%20Papers.apk';
         
+        // If user cancels download or it takes too long, restore button after 5 seconds
         setTimeout(() => {
-            // Restore button state after delay
             this.innerHTML = originalText;
             this.disabled = false;
-            
-            // Redirect to download link after button is restored
-            window.location.href = 'https://ssmpapers.xyz/apk/1.0.0/SSM%20Papers.apk';
-        }, delay);
+        }, 5000);
     });
 }
 
