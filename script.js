@@ -1,5 +1,32 @@
+// Add loading state to download button
+const downloadButton = document.querySelector('.btn-download');
+if (downloadButton) {
+    downloadButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Save original button text
+        const originalText = this.innerHTML;
+        
+        // Add loading state
+        this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+        this.disabled = true;
+        
+        // Simulate download delay (4 seconds)
+        const delay = 2000; // Fixed 2 second delay
+        
+        setTimeout(() => {
+            // Restore button state after delay
+            this.innerHTML = originalText;
+            this.disabled = false;
+            
+            // Redirect to download link after button is restored
+            window.location.href = 'https://ssmpapers.xyz/apk/1.0.0/SSM%20Papers.apk';
+        }, delay);
+    });
+}
+
 // Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').not('.btn-download').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
