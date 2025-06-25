@@ -11,6 +11,13 @@ if (downloadButton) {
     this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
     this.disabled = true;
 
+    // ✅ Send Google Analytics event
+    gtag('event', 'download_clicked', {
+      'event_category': 'Download',
+      'event_label': 'Hero Download Button',
+      'value': 1
+    });
+
     // Redirect to download URL immediately
     window.location.href = "https://ssmpapers.xyz/app/V-1.0.0/SSM%20Papers.apk";
 
@@ -21,6 +28,7 @@ if (downloadButton) {
     }, 5000);
   });
 }
+
 
 // Smooth scrolling for anchor links
 document
