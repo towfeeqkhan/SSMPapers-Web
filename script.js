@@ -12,14 +12,14 @@ if (downloadButton) {
     this.disabled = true;
 
     // ✅ Send Google Analytics event
-    gtag('event', 'download_clicked', {
-      'event_category': 'Download',
-      'event_label': 'Hero Download Button',
-      'value': 1
+    gtag("event", "download_clicked", {
+      event_category: "Download",
+      event_label: "Hero Download Button",
+      value: 1,
     });
 
     // Redirect to download URL immediately
-    window.location.href = "https://ssmpapers.xyz/app/V-1.0.0/SSM%20Papers.apk";
+    window.location.href = "https://ssmpapers.xyz/apk/V-1.0.0/SSM%20Papers.apk";
 
     // If user cancels download or it takes too long, restore button after 5 seconds
     setTimeout(() => {
@@ -28,7 +28,6 @@ if (downloadButton) {
     }, 5000);
   });
 }
-
 
 // Smooth scrolling for anchor links
 document
