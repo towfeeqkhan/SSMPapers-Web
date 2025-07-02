@@ -32,18 +32,19 @@ if (downloadButton) {
 // Smooth scrolling for anchor links
 document
   .querySelectorAll('a[href^="#"]')
-  .not(".btn-download")
   .forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    });
+    if (!anchor.classList.contains('btn-download')) {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    }
   });
 
 // Animation on scroll
