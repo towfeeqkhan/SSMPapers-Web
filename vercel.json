@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "ssmpapers.in"
+        }
+      ],
+      "destination": "https://www.ssmpapers.in/$1",
+      "permanent": true
+    }
+  ]
+}
