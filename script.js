@@ -19,7 +19,7 @@ if (downloadButton) {
     });
 
     // Redirect to download URL immediately
-    window.location.href = "https://ssmpapers.xyz/apk/V-1.0.0/SSM%20Papers.apk";
+    window.location.href = "https://ssmpapers.xyz/apk/V-2.0.0/SSM%20Papers.apk";
 
     // If user cancels download or it takes too long, restore button after 5 seconds
     setTimeout(() => {
@@ -30,22 +30,20 @@ if (downloadButton) {
 }
 
 // Smooth scrolling for anchor links
-document
-  .querySelectorAll('a[href^="#"]')
-  .forEach((anchor) => {
-    if (!anchor.classList.contains('btn-download')) {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-          target.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      });
-    }
-  });
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  if (!anchor.classList.contains("btn-download")) {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  }
+});
 
 // Animation on scroll
 const animateOnScroll = () => {
